@@ -1,4 +1,6 @@
-def call() {
-    echo 'Installing backend dependencies...'
-    sh 'npm install'
+stage('Install Dependencies') {
+    script {
+        echo 'Installing backend dependencies...'
+        sh 'npm install'
+    }
 }
