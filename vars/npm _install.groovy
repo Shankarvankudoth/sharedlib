@@ -1,6 +1,7 @@
 stage('Install Dependencies') {
-    script {
-        echo 'Installing backend dependencies...'
-        sh 'npm install'
+    steps {
+        dir('backend') {
+            sh 'npm install'
+        }
     }
 }
